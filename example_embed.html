@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Boots</title>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/swfobject/2.2/swfobject.min.js"></script>
+    <script>
+        function loadCP() {
+			$('#game')[0].toggleDebug();
+            $('#game')[0].startup("login-server.example.com", 6112, "http://media.example.com/");
+        }
+        
+        var flash = {};
+        
+        var params = {
+            menu: "false",
+            allowScriptAccess: "always"
+        };
+            
+        var attrs = {
+            id: "game",
+            name: "game",
+        };
+        
+        swfobject.embedSWF("http://media.example.com/boots.swf", "game", "100%", "100%", "11.0.0", false, flash, params, attrs);
+    </script>
+</head>
+<body>
+    <div id="game" style="width: 1440px; height: 960px;">
+		Please enable Flash
+	</div>
+</body>
+</html>
